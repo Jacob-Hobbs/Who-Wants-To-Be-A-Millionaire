@@ -2,14 +2,14 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden;
 }
 
 #questionScreen {
     width: 78%;
     height: 100%;
-    background-image: url("../css/resources/studio.jpg"); /* Specify your background image */
-    background-size: cover; /* Adjust the background image size */
+    background-image: url("../css/resources/studio.jpg");
+    background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
@@ -19,8 +19,8 @@ body, html {
 #levelAside {
     width: 22%;
     height: 100%;
-    background-image: url("../css/resources/sideBar.jpg"); /* Specify your background image */
-    background-size: cover; /* Adjust the background image size */
+    background-image: url("../css/resources/sideBar.jpg");
+    background-size: cover;
 }
 
 #container {
