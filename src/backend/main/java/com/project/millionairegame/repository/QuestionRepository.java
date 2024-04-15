@@ -17,19 +17,42 @@ public class QuestionRepository {
 
     }
 
-    public void getRandomQuestion(String amount) {
-        try {
-            // Produce random int to represent random question line
-            Random random = new Random();
-            int chosenLine = random.nextInt(3, 28);
+    // Repository method to retrieve a random question from specified csv file
+    public StringBuilder getRandomQuestion(String amount) throws IOException {
+        // Initialize new StringBuilder object to store question line in.
+        StringBuilder sb1 = new StringBuilder();
+        // Produce random int to represent random question line
+        Random random = new Random();
+        int chosenLine = random.nextInt(3, 28);
 
+        // Try-Catch block to handle IOException for retrieving random question from chosen csv
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(
+                "src/backend/main/resources/static/" + amount + ".csv"))) {
 
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("../repository/100.csv"));
-            System.out.println("File open successful!");
-            String line = "";
-            System.out.println(bufferedReader.readLine());
+            // Try-Catch block to handle IOException for getting total number of lines in chosen csv
+            int lines = 0;
+            try {
+                BufferedReader lineReader = new BufferedReader(new FileReader(
+                        "src/backend/main/resources/static/" + amount + ".csv"));
+                while (lineReader.readLine() != null) {
+                    lines++;
+                }
+                lineReader.close();
+            } catch (IOException ioException){
+                System.out.println(ioException.getMessage());
+            }
+
+            bufferedReader.readLine();
+            for (int i = 3; i < lines + 1; i++) {
+                bufferedReader.readLine();
+                if (i == chosenLine) {
+                    sb1.append(bufferedReader.readLine());
+                }
+            }
         } catch (IOException ioException) {
-            System.out.println("ERROR!");
+            System.out.println(ioException.getMessage());
         }
+        // return StringBuilder object (random question)
+        return sb1;
     }
 }
