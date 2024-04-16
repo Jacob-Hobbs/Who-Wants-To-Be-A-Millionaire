@@ -8,19 +8,18 @@ import java.io.IOException;
 @Service
 public class QuestionService {
 
-    private QuestionRepository questionRepository;
+    private final QuestionRepository questionRepository;
 
     public QuestionService() {
-
+        this.questionRepository = new QuestionRepository();
     }
 
-    // TODO: Implement such that this service method returns a JsonObject when called.
+    // TODO: Implement such that this service method returns a Json Object when called.
     public String getNewQuestion(String amount) throws IOException {
+        String csvLine = "";
         try {
-            StringBuilder sb1 = questionRepository.getRandomQuestion(amount);
-
-
-
+            csvLine = questionRepository.getRandomQuestion(amount).toString();
+            System.out.println("csvLine:" + csvLine);
 
 
         } catch (IOException ioException) {
@@ -28,6 +27,6 @@ public class QuestionService {
         }
 
 
-        return "New Question";
+        return csvLine;
     }
 }
