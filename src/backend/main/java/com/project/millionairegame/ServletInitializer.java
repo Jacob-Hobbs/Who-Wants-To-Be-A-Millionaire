@@ -1,4 +1,4 @@
-package com.project.millionairegame;
+package backend.main.java.com.project.millionairegame;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

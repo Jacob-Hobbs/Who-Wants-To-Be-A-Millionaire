@@ -1,4 +1,4 @@
-package com.project.millionairegame;
+package backend.main.java.com.project.millionairegame;
 
 import com.project.millionairegame.repository.QuestionRepository;
 import org.springframework.boot.SpringApplication;
