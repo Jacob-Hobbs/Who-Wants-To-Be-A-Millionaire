@@ -1,6 +1,6 @@
 package backend.main.java.com.project.millionairegame;
 
-import com.project.millionairegame.repository.QuestionRepository;
+import backend.main.java.com.project.millionairegame.repository.QuestionRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -13,7 +13,7 @@ public class MillionaireApplication {
 		SpringApplication.run(MillionaireApplication.class, args);
 		QuestionRepository questionRepository = new QuestionRepository();
 		try {
-			StringBuilder value = questionRepository.getRandomQuestion("1000000");
+			StringBuilder value = questionRepository.getRandomQuestion("2000");
 			System.out.println(value);
 		} catch (IOException e) {
 			System.out.println(e.getMessage());

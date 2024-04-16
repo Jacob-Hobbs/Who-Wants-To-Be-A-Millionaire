@@ -1,4 +1,4 @@
-package com.project.millionairegame.repository;
+package backend.main.java.com.project.millionairegame.repository;
 
 import org.springframework.stereotype.Repository;
 

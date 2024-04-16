@@ -1,6 +1,6 @@
-package com.project.millionairegame.service;
+package backend.main.java.com.project.millionairegame.service;
 
-import com.project.millionairegame.repository.QuestionRepository;
+import backend.main.java.com.project.millionairegame.repository.QuestionRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;

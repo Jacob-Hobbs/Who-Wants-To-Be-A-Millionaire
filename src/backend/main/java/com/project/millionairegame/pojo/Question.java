@@ -1,4 +1,4 @@
-package com.project.millionairegame.pojo;
+package backend.main.java.com.project.millionairegame.pojo;
 
 
 // Question POJO for JSON mapping purposes

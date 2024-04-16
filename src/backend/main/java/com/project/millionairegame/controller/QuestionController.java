@@ -1,7 +1,6 @@
-package com.project.millionairegame.controller;
+package backend.main.java.com.project.millionairegame.controller;
 
-import com.fasterxml.jackson.databind.util.JSONWrappedObject;
-import com.project.millionairegame.service.QuestionService;
+import backend.main.java.com.project.millionairegame.service.QuestionService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
