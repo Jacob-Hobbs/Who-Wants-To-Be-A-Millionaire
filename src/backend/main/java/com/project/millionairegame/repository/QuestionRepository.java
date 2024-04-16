@@ -21,9 +21,6 @@ public class QuestionRepository {
     public StringBuilder getRandomQuestion(String amount) throws IOException {
         // Initialize new StringBuilder object to store question line in.
         StringBuilder sb1 = new StringBuilder();
-        // Produce random int to represent random question line
-        Random random = new Random();
-        int chosenLine = random.nextInt(3, 28);
 
         // Try-Catch block to handle IOException for retrieving random question from chosen csv
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(
@@ -41,6 +38,10 @@ public class QuestionRepository {
             } catch (IOException ioException){
                 System.out.println(ioException.getMessage());
             }
+
+            // Produce random int to represent random question line
+            Random random = new Random();
+            int chosenLine = random.nextInt(3, lines + 1);
 
             bufferedReader.readLine();
             for (int i = 3; i < lines + 1; i++) {

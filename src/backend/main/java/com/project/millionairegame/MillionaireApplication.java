@@ -1,5 +1,6 @@
 package backend.main.java.com.project.millionairegame;
 
+import backend.main.java.com.project.millionairegame.pojo.Question;
 import backend.main.java.com.project.millionairegame.repository.QuestionRepository;
 import backend.main.java.com.project.millionairegame.service.QuestionService;
 import org.springframework.boot.SpringApplication;
@@ -17,8 +18,8 @@ public class MillionaireApplication {
 
 		try {
 
-			String value = questionService.getNewQuestion("2000");
-			System.out.println(value);
+			Question newQuestion = questionService.getNewQuestion("125000");
+			System.out.println(newQuestion);
 
 		} catch (IOException e) {
 			System.out.println(e.getMessage());

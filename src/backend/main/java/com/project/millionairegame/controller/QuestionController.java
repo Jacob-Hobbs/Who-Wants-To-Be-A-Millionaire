@@ -1,5 +1,6 @@
 package backend.main.java.com.project.millionairegame.controller;
 
+import backend.main.java.com.project.millionairegame.pojo.Question;
 import backend.main.java.com.project.millionairegame.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +16,7 @@ public class QuestionController {
     // REST endpoint to retrieve new question
     @GetMapping("/new")
     public void getNewQuestion(String amount) throws IOException {
-        String newQuestion = questionService.getNewQuestion(amount);
+        Question newQuestion = questionService.getNewQuestion(amount);
 
     }
 }
