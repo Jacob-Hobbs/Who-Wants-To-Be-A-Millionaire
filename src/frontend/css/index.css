@@ -11,9 +11,7 @@ body, html {
     background-image: url("../css/resources/studio.jpg");
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 #levelAside {
@@ -28,6 +26,33 @@ body, html {
     height: 100%;
 }
 
+#header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 15vw;
+    max-height: 75px;
+}
+
+#soundButton {
+    left: 30px;
+}
+
+#popoutButton {
+    right: 30px;
+}
+
+.headerButtons {
+    position: relative;
+    top: 30px;
+    width: 15vw;
+    max-width: 75px;
+}
+
+
+
+
 @media screen and (max-width: 1000px) {
     #questionScreen {
         width: 100%;
@@ -36,3 +61,10 @@ body, html {
         width: 0;
     }
 }
+
+@media screen and (min-width: 1000px) {
+    #popoutButton {
+        visibility: hidden;
+    }
+}
+
