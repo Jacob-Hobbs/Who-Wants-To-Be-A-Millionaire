@@ -152,7 +152,7 @@ body, html {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     width: 78%;
     /*ADD THE BELOW LINES:*/
     margin-top: 15vh;
