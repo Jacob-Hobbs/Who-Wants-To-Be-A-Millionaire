@@ -75,6 +75,9 @@ body, html {
     justify-content: center;
     height: 15vw;
     max-height: 75px;
+    position: absolute;
+    bottom: 0;
+    width: 78%;
 }
 
 .footerButtons {
@@ -90,6 +93,7 @@ body, html {
     background-image: url("../css/resources/5050.png");
     background-size: cover;
     border-radius: 10px;
+    margin-right: 25px;
 }
 
 #fiftyFiftyButton:hover {
@@ -114,6 +118,7 @@ body, html {
     background-image: url("../css/resources/askAudience.png");
     background-size: cover;
     border-radius: 10px;
+    margin-left: 25px;
 }
 
 #pollAudienceButton:hover {
@@ -127,6 +132,9 @@ body, html {
     }
     #levelAside {
         width: 0;
+    }
+    #footer {
+        width: 100%;
     }
 }
 
