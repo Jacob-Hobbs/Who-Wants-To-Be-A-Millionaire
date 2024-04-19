@@ -37,10 +37,27 @@ body, html {
 
 #soundButton {
     left: 30px;
+    cursor: pointer;
+    background-image: url("../css/resources/soundYes.png");
+    background-size: cover;
+    border-radius: 10px;
+
+}
+#soundButton:hover {
+    background-image: url("../css/resources/soundYesHover.png");
+    transition: 0.3s;
 }
 
 #popoutButton {
     right: 30px;
+    cursor: pointer;
+    background-image: url("../css/resources/popout.png");
+    background-size: cover;
+    border-radius: 10px;
+}
+#popoutButton:hover {
+    background-image: url("../css/resources/popoutHover.png");
+    transition: 0.3s;
 }
 
 .headerButtons {
@@ -48,10 +65,61 @@ body, html {
     top: 30px;
     width: 15vw;
     max-width: 75px;
+    border-color: #47a1c0;
 }
 
+#footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 15vw;
+    max-height: 75px;
+}
 
+.footerButtons {
+    position: relative;
+    bottom: 30px;
+    width: 15vw;
+    max-width: 75px;
+    border-color: #47a1c0;
+}
 
+#fiftyFiftyButton {
+    cursor: pointer;
+    background-image: url("../css/resources/5050.png");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#fiftyFiftyButton:hover {
+    background-image: url("../css/resources/5050hover.png");
+    transition: 0.3s;
+}
+
+#phoneFriendButton {
+    cursor: pointer;
+    background-image: url("../css/resources/phone.png");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#phoneFriendButton:hover {
+    background-image: url("../css/resources/phoneHover.png");
+    transition: 0.3s;
+}
+
+#pollAudienceButton {
+    cursor: pointer;
+    background-image: url("../css/resources/askAudience.png");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#pollAudienceButton:hover {
+    background-image: url("../css/resources/askAudienceHover.png");
+    transition: 0.3s;
+}
 
 @media screen and (max-width: 1000px) {
     #questionScreen {
