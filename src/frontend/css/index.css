@@ -11,7 +11,6 @@ body, html {
     background-image: url("../css/resources/studio.jpg");
     background-size: cover;
     background-position: center;
-
 }
 
 #levelAside {
@@ -136,6 +135,9 @@ body, html {
     #footer {
         width: 100%;
     }
+    #article {
+        width: 100% !important;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -150,17 +152,79 @@ body, html {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 78%;
+    /*ADD THE BELOW LINES:*/
+    margin-top: 15vh;
+}
+
+@media screen and (max-height: 400px) {
+    #footer {
+        margin-top: 50px;
+    }
+}
+
+
+#timer {
+    height: 5vw;
+    width: 10vw;
+    min-width: 50px;
+    min-height: 50px;
+    max-height: 25px;
+    max-width: 100px;
+    background-color: #010320;
+    color: white;
+    position: relative;
+    border: 3px solid dimgrey;
+    justify-content: center;
+    border-right: none;
+    border-left: none;
+    cursor: wait;;
+    margin-bottom: 5px;
+    align-content: center;
+}
+
+#timer::before,
+#timer::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: #010320;
+    border: 3px solid dimgrey;
+}
+
+#timer::before {
+    top: -3px;
+    left: -21px;
+    border-top-left-radius: 50px 100px;
+    border-bottom-left-radius: 50px 100px;
+    border-right: none;
+}
+
+#timer::after {
+    top: -3px;
+    right: -21px;
+    border-top-right-radius: 50px 100px;
+    border-bottom-right-radius: 50px 100px;
+    border-left: none;
 }
 
 #questionContainer  {
     height: 8vw;
     width: 25vw;
     min-width: 300px;
+    min-height: 100px;
     background-color: #010320;
     color: white;
     position: relative;
     border: 3px solid dimgrey;
     justify-content: center;
+    border-right: none;
+    border-left: none;
+    cursor: help;
+    margin-bottom: 10px;
+    align-content: center;
 }
 
 #questionContainer::before,
@@ -174,16 +238,86 @@ body, html {
 }
 
 #questionContainer::before {
-    top: -10px;
-    left: -30px;
+    top: -3px;
+    left: -21px;
     border-top-left-radius: 50px 100px;
     border-bottom-left-radius: 50px 100px;
     border-right: none;
 }
 
 #questionContainer::after {
-    top:-10px;
-    right: -30px;
+    top: -3px;
+    right: -21px;
+    border-top-right-radius: 50px 100px;
+    border-bottom-right-radius: 50px 100px;
+    border-left: none;
+}
+
+#answersContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#answersA\&B {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+#answerA {
+    margin-right: 60px;
+}
+
+#answerC {
+    margin-right: 60px;
+}
+
+#answersC\&D {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.answerABCD {
+    height: 5vw;
+    width: 15vw;
+    min-width: 150px;
+    min-height: 50px;
+    background-color: #010320;
+    color: white;
+    position: relative;
+    border: 3px solid dimgrey;
+    justify-content: center;
+    border-right: none;
+    border-left: none;
+    cursor: pointer;
+    align-content: center;
+}
+
+.answerABCD::before,
+.answerABCD::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: #010320;
+    border: 3px solid dimgrey;
+}
+
+.answerABCD::before {
+    top: -3px;
+    left: -21px;
+    border-top-left-radius: 50px 100px;
+    border-bottom-left-radius: 50px 100px;
+    border-right: none;
+}
+
+.answerABCD::after {
+    top: -3px;
+    right: -21px;
     border-top-right-radius: 50px 100px;
     border-bottom-right-radius: 50px 100px;
     border-left: none;
