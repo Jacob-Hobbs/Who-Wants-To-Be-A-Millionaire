@@ -330,6 +330,7 @@ body, html {
     cursor: pointer;
     align-content: center;
     text-align: left;
+    padding-left: 3px;
 }
 
 .answerABCD p span {
@@ -369,6 +370,7 @@ body, html {
 
 .textContainer {
     font-family: "ITC Conduit Bold", sans-serif;
+    font-size: 2vh;
 }
 
 
@@ -408,6 +410,9 @@ body, html {
     .answerABCD {
         height: 7vh !important;
         min-width: 20vw;
+    }
+    .textContainer {
+        font-size: 5vh;
     }
 }
 
@@ -457,6 +462,9 @@ body, html {
         height: 5vh !important;
         min-width: 20vw;
     }
+    .textContainer {
+        font-size: 3vh !important;
+    }
 }
 
 @media  screen and (max-height: 800px) {
@@ -471,10 +479,21 @@ body, html {
         height: 5vh !important;
         min-width: 17vw;
     }
+    .textContainer {
+        font-size: 2.5vh;
+    }
 }
-/* Width media queries */
-@media  screen and (max-width: 1000px) {
 
+/* Width media queries */
+@media  screen and (max-width: 1200px) {
+    .textContainer {
+        font-size: 2.4vh !important;
+    }
+}
+@media  screen and (max-width: 1000px) {
+    #timer {
+        width: 8.5vw;
+    }
     #questionContainer {
         height: 13vh !important;
         width: 40vw;
@@ -485,6 +504,9 @@ body, html {
     .answerABCD {
         height: 4vh !important;
         min-width: 17vw;
+    }
+    .textContainer {
+        font-size: 2.5vh !important;
     }
 }
 
@@ -551,6 +573,9 @@ body, html {
         height: 4vh !important;
         min-width: 28vw;
     }
+    .textContainer {
+        font-size: 1.9vh;
+    }
 }
 
 @media  screen and (max-width: 400px) {
@@ -567,6 +592,16 @@ body, html {
     .answerABCD {
         height: 4vh !important;
         min-width: 27vw;
+    }
+    .textContainer {
+        font-size: 2.5vh !important;
+    }
+}
+
+@media  screen and (max-width: 404px) {
+
+    .textContainer {
+        font-size: 1.8vh !important;
     }
 }
 
