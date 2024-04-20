@@ -40,8 +40,8 @@ body, html {
     justify-content: space-between;
     min-height: 10vh;
     /*REMOVE AFTER TESTING: */
-    border-color: orange;
-    border-style: solid;
+    /*border-color: orange;
+    border-style: solid;*/
 }
 
 #soundButton {
@@ -84,8 +84,8 @@ body, html {
     flex-wrap: nowrap;
     justify-content: center;
     min-height: 15vh;
-    border-color: orange;
-    border-style: solid;
+    /*border-color: orange;
+    border-style: solid;*/
     box-sizing: border-box;
     margin-top: auto;
 }
@@ -193,8 +193,8 @@ body, html {
     align-items: center;
     box-sizing: border-box;
     /*REMOVE AFTER TESTING: */
-    border-color: orange;
-    border-style: solid;
+    /*border-color: orange;
+    border-style: solid;*/
     /*HEIGHT TEST*/
     min-height: 70vh;
 }
@@ -213,6 +213,7 @@ body, html {
     cursor: wait;;
     margin-bottom: 5px;
     align-content: center;
+    text-align: center;
 }
 
 #timer::before,
@@ -255,6 +256,7 @@ body, html {
     cursor: help;
     margin-bottom: 10px;
     align-content: center;
+    text-align: center;
 }
 
 #questionContainer::before,
@@ -318,8 +320,6 @@ body, html {
 .answerABCD {
     height: 3.5vh;
     width: 15vw;
-
-
     background-color: #010320;
     color: white;
     position: relative;
@@ -329,6 +329,11 @@ body, html {
     border-left: none;
     cursor: pointer;
     align-content: center;
+    text-align: left;
+}
+
+.answerABCD p span {
+    color: orange;
 }
 
 .answerABCD::before,
@@ -356,6 +361,37 @@ body, html {
     border-bottom-right-radius: 50px 100px;
     border-left: none;
 }
+
+@font-face {
+    font-family: 'ITC Conduit Bold';
+    src: url("../css/resources/fonts/Conduit ITC Bold.otf");
+}
+
+.textContainer {
+    font-family: "ITC Conduit Bold", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Height media queries */
 @media  screen and (max-height: 400px) {
