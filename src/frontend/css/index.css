@@ -373,15 +373,41 @@ body, html {
     font-size: 2vh;
 }
 
+
 /* Height media queries */
+@media  screen and (min-height: 1000px) {
+
+}
+@media  screen and (max-height: 900px) {
+
+
+}
+@media  screen and (max-height: 1500px) {
+    .textContainer {
+        font-size: 1.3vh;
+    }
+}
+@media  screen and (max-height: 1200px) {
+    .textContainer {
+        font-size: 1.5vh;
+    }
+}
+@media  screen and (max-height: 1100px) {
+    .textContainer {
+        font-size: 2vh;
+    }
+}
 @media  screen and (max-height: 800px) {
     #questionContainer {
         height: 10vh;
     }
     .answerABCD {
         height: 5vh;
-
     }
+    .textContainer {
+        font-size: 2.5vh;
+    }
+
 }
 @media  screen and (max-height: 700px) {
     #questionContainer {
@@ -389,6 +415,9 @@ body, html {
     }
     #answerA, #answerB, #answerC, #answerD {
         height: 7vh;
+    }
+    .textContainer {
+        font-size: 3vh;
     }
 }
 @media  screen and (max-height: 600px) {
@@ -401,6 +430,9 @@ body, html {
     #answerA, #answerB, #answerC, #answerD {
         height: 8vh;
     }
+    .textContainer {
+        font-size: 3.5vh;
+    }
 }
 @media  screen and (max-height: 500px) {
     #timer {
@@ -412,6 +444,9 @@ body, html {
     #answerA, #answerB, #answerC, #answerD {
         height: 9vh;
     }
+    .textContainer {
+        font-size: 4vh;
+    }
 }
 @media  screen and (max-height: 400px) {
     #questionContainer {
@@ -420,10 +455,15 @@ body, html {
     #answerA, #answerB, #answerC, #answerD {
         height: 10vh;
     }
+    .textContainer {
+        font-size: 5vh;
+    }
 }
 
-
 /* Width media queries */
+@media screen and (max-width : 1500px) {
+
+}
 @media  screen and (min-width: 1000px) {
     #timer {
         width: 8.5vw;
@@ -436,7 +476,6 @@ body, html {
         min-width: 80px;
     }
     #questionContainer {
-
         width: 40vw;
     }
     #answersContainer {
@@ -445,6 +484,8 @@ body, html {
     .answerABCD {
         min-width: 17vw;
     }
+
+
 }
 
 @media  screen and (max-width: 800px) {
@@ -509,6 +550,9 @@ body, html {
     .answerABCD {
         height: 6vh;
         min-width: 32vw;
+    }
+    .textContainer {
+        font-size: 2.5vh;
     }
 
 }
