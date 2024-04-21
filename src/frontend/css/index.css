@@ -373,170 +373,107 @@ body, html {
     font-size: 2vh;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Height media queries */
-@media  screen and (max-height: 400px) {
-    #timer {
-        height: 10vh;
-    }
-    #questionContainer {
-        height: 13vh;
-        width: 47vw;
-    }
-    #answersContainer {
-        width: 47vw;
-    }
-    .answerABCD {
-        height: 7vh !important;
-        min-width: 20vw;
-    }
-    .textContainer {
-        font-size: 5vh;
-    }
-}
-
-@media  screen and (max-height: 500px) {
-    #timer {
-        height: 10vh;
-    }
-    #questionContainer {
-        height: 13vh;
-        width: 47vw;
-    }
-    #answersContainer {
-        width: 47vw;
-    }
-    .answerABCD {
-        height: 7vh !important;
-        min-width: 20vw;
-    }
-}
-
-@media  screen and (max-height: 600px) {
-    #timer {
-        height: 7vh;
-    }
-    #questionContainer {
-        height: 11vh;
-        width: 47vw;
-    }
-    #answersContainer {
-        width: 47vw;
-    }
-    .answerABCD {
-        height: 5vh !important;
-        min-width: 20vw;
-    }
-}
-
-@media  screen and (max-height: 700px) {
-    #questionContainer {
-        height: 11vh;
-        width: 47vw;
-    }
-    #answersContainer {
-        width: 47vw;
-    }
-    .answerABCD {
-        height: 5vh !important;
-        min-width: 20vw;
-    }
-    .textContainer {
-        font-size: 3vh !important;
-    }
-}
-
 @media  screen and (max-height: 800px) {
     #questionContainer {
         height: 10vh;
-        width: 40vw;
-    }
-    #answersContainer {
-        width: 40vw;
     }
     .answerABCD {
-        height: 5vh !important;
-        min-width: 17vw;
+        height: 5vh;
+
     }
-    .textContainer {
-        font-size: 2.5vh;
+}
+@media  screen and (max-height: 700px) {
+    #questionContainer {
+        height: 17vh;
+    }
+    #answerA, #answerB, #answerC, #answerD {
+        height: 7vh;
+    }
+}
+@media  screen and (max-height: 600px) {
+    #timer {
+        height: 8vh;
+    }
+    #questionContainer {
+        height: 18vh;
+    }
+    #answerA, #answerB, #answerC, #answerD {
+        height: 8vh;
+    }
+}
+@media  screen and (max-height: 500px) {
+    #timer {
+        height: 9vh;
+    }
+    #questionContainer {
+        height: 20vh;
+    }
+    #answerA, #answerB, #answerC, #answerD {
+        height: 9vh;
+    }
+}
+@media  screen and (max-height: 400px) {
+    #questionContainer {
+        height: 25vh;
+    }
+    #answerA, #answerB, #answerC, #answerD {
+        height: 10vh;
     }
 }
 
+
 /* Width media queries */
-@media  screen and (max-width: 1200px) {
-    .textContainer {
-        font-size: 2.4vh !important;
+@media  screen and (min-width: 1000px) {
+    #timer {
+        width: 8.5vw;
+        min-width: 80px;
     }
 }
 @media  screen and (max-width: 1000px) {
     #timer {
         width: 8.5vw;
+        min-width: 80px;
     }
     #questionContainer {
-        height: 13vh !important;
+
         width: 40vw;
     }
     #answersContainer {
         width: 40vw;
     }
     .answerABCD {
-        height: 4vh !important;
         min-width: 17vw;
-    }
-    .textContainer {
-        font-size: 2.5vh !important;
     }
 }
 
 @media  screen and (max-width: 800px) {
     #timer {
         width: 8vw;
+        min-width: 80px;
     }
     #questionContainer {
-        height: 8vh;
         width: 50vw;
     }
     #answersContainer {
         width: 40vw;
     }
     .answerABCD {
-        height: 4vh !important;
         min-width: 21vw;
     }
 }
 
 @media  screen and (max-width: 700px) {
+    #timer {
+        min-width: 80px;
+    }
     #questionContainer {
-        height: 8vh;
         width: 60vw;
     }
     #answersContainer {
         width: 40vw;
     }
     .answerABCD {
-        height: 4vh !important;
         min-width: 25vw;
     }
 }
@@ -544,16 +481,15 @@ body, html {
 @media  screen and (max-width: 600px) {
     #timer {
         width: 10vw;
+        min-width: 80px;
     }
     #questionContainer {
-        height: 8vh;
         width: 70vw;
     }
     #answersContainer {
         width: 40vw;
     }
     .answerABCD {
-        height: 4vh !important;
         min-width: 29vw;
     }
 }
@@ -561,47 +497,37 @@ body, html {
 @media  screen and (max-width: 500px) {
     #timer {
         width: 12vw;
+        min-width: 80px;
     }
     #questionContainer {
-        height: 8vh;
-        width: 70vw;
+        height: 18vh;
+        width: 79vw;
     }
     #answersContainer {
         width: 40vw;
     }
     .answerABCD {
-        height: 4vh !important;
-        min-width: 28vw;
+        height: 6vh;
+        min-width: 32vw;
     }
-    .textContainer {
-        font-size: 1.9vh;
-    }
+
 }
 
-@media  screen and (max-width: 400px) {
+@media  screen and (max-width: 410px) {
     #timer {
         width: 15vw;
+        min-width: 80px;
     }
     #questionContainer {
-        height: 8vh;
-        width: 70vw;
+        width: 80vw;
     }
     #answersContainer {
         width: 40vw;
     }
     .answerABCD {
-        height: 4vh !important;
-        min-width: 27vw;
+        min-width: 32vw;
     }
-    .textContainer {
-        font-size: 2.5vh !important;
-    }
+
 }
 
-@media  screen and (max-width: 404px) {
-
-    .textContainer {
-        font-size: 1.8vh !important;
-    }
-}
 
