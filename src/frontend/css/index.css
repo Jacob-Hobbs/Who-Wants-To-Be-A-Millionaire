@@ -45,10 +45,10 @@ body, html {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    min-height: 70vh;
+    min-height: 84vh;
     /* Delete below after testing*/
-    /*border-color: orange;
-    border-style: solid;*/
+    /*border-color: orange;*/
+    /*border-style: solid;*/
 }
 
 #walkAwayDiv {
@@ -56,15 +56,15 @@ body, html {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    min-height: 15vh;
+    min-height: 10vh;
     /* Delete below after testing*/
-    /*border-color: orange;
-    border-style: solid;*/
+    /*border-color: orange;*/
+    /*border-style: solid;*/
 }
 
 .levelBox {
-    height: 2vh;
-    width: 15vw;
+    height: 3.5vh;
+    width: 13vw;
     background-color: #010320;
     color: white;
     position: relative;
@@ -72,7 +72,7 @@ body, html {
     justify-content: center;
     border-right: none;
     border-left: none;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     align-content: center;
     text-align: left;
     cursor: default;
@@ -113,6 +113,7 @@ body, html {
     background-image: url("../css/resources/walkAway.png");
     background-size: cover;
     border-radius: 10px;
+
 }
 
 #walkAwayButton:hover {
@@ -120,9 +121,18 @@ body, html {
     transition: 0.3s;
 }
 
-#asideLogo {
-    margin-top: 30px;
-    min-height: 150px;
+.levelCircle {
+    font-size: 3vh;
+    margin-right: 30px;
+    color: #2135b8;
+}
+
+.whiteDefault {
+    color: white;
+}
+
+.orangeDefault {
+    color: darkorange;
 }
 
 
@@ -233,22 +243,16 @@ body, html {
     #footer, #walkAwayDiv {
         min-height: 20vh;
     }
-    #header, #logoArea {
+    #header {
         min-height: 5vh;
-    }
-    #asideLogo {
-        visibility: hidden;
     }
 }
 @media screen and (max-height: 500px) {
     #footer, #walkAwayDiv {
         min-height: 22vh;
     }
-    #header, #logoArea  {
+    #header {
         min-height: 3vh;
-    }
-    #asideLogo {
-        visibility: hidden;
     }
 }
 @media screen and (max-height: 400px) {
@@ -257,9 +261,6 @@ body, html {
     }
     #header {
         min-height: 3vh;
-    }
-    #asideLogo {
-        visibility: hidden;
     }
     #article, #levelDiv {
         min-height: 60vh;
@@ -341,17 +342,12 @@ body, html {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    /*REMOVE AFTER TESTING: */
-    /*border-color: orange;
-    border-style: solid;*/
-    /*HEIGHT TEST*/
     min-height: 70vh;
 }
 
 #timer {
     height: 6vh;
     width: 5vw;
-
     background-color: #010320;
     color: white;
     position: relative;
@@ -394,7 +390,6 @@ body, html {
 #questionContainer  {
     height: 7vh;
     width: 33vw;
-
     background-color: #010320;
     color: white;
     position: relative;
