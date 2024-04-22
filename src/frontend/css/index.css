@@ -27,6 +27,145 @@ body, html {
     flex-wrap: nowrap;
 }
 
+#logoArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-height: 10vh;
+    /* Delete below after testing*/
+    /*border-color: orange;
+    border-style: solid;*/
+}
+
+#levelDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 70vh;
+    /* Delete below after testing*/
+    /*border-color: orange;
+    border-style: solid;*/
+}
+
+#walkAwayDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-height: 15vh;
+    /* Delete below after testing*/
+    /*border-color: orange;
+    border-style: solid;*/
+}
+
+.levelBox {
+    height: 2vh;
+    width: 15vw;
+    background-color: #010320;
+    color: white;
+    position: relative;
+    border: 3px solid dimgrey;
+    justify-content: center;
+    border-right: none;
+    border-left: none;
+    margin-bottom: 5px;
+    align-content: center;
+    text-align: left;
+    cursor: default;
+}
+.levelBox::before,
+.levelBox::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: #010320;
+    border: 3px solid dimgrey;
+}
+
+.levelBox::before {
+    top: -3px;
+    left: -21px;
+    border-top-left-radius: 50px 100px;
+    border-bottom-left-radius: 50px 100px;
+    border-right: none;
+}
+
+.levelBox::after {
+    top: -3px;
+    right: -21px;
+    border-top-right-radius: 50px 100px;
+    border-bottom-right-radius: 50px 100px;
+    border-left: none;
+}
+
+#walkAwayButton {
+    border-color: #47a1c0;
+    min-height: 75px;
+    min-width: 75px;
+    width: 9vh;
+    height: 9vh;
+    cursor: pointer;
+    background-image: url("../css/resources/walkAway.png");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#walkAwayButton:hover {
+    background-image: url("../css/resources/walkAwayHover.png");
+    transition: 0.3s;
+}
+
+#asideLogo {
+    margin-top: 30px;
+    min-height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #container {
     display: flex;
     flex-direction: row;
@@ -91,29 +230,38 @@ body, html {
 }
 
 @media screen and (max-height: 600px) {
-    #footer {
+    #footer, #walkAwayDiv {
         min-height: 20vh;
     }
-    #header {
+    #header, #logoArea {
         min-height: 5vh;
+    }
+    #asideLogo {
+        visibility: hidden;
     }
 }
 @media screen and (max-height: 500px) {
-    #footer {
+    #footer, #walkAwayDiv {
         min-height: 22vh;
     }
-    #header {
+    #header, #logoArea  {
         min-height: 3vh;
+    }
+    #asideLogo {
+        visibility: hidden;
     }
 }
 @media screen and (max-height: 400px) {
-    #footer {
+    #footer, #walkAwayDiv {
         min-height: 32vh;
     }
     #header {
         min-height: 3vh;
     }
-    #article {
+    #asideLogo {
+        visibility: hidden;
+    }
+    #article, #levelDiv {
         min-height: 60vh;
     }
 }
@@ -170,6 +318,7 @@ body, html {
     }
     #levelAside {
         width: 0;
+        visibility: hidden;
     }
     #footer {
         width: 100%;
