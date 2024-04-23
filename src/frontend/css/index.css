@@ -69,14 +69,17 @@ body, html {
     color: white;
     position: relative;
     border: 3px solid dimgrey;
-    justify-content: center;
+    justify-content: left;
     border-right: none;
     border-left: none;
     margin-bottom: 10px;
     align-content: center;
     text-align: left;
     cursor: default;
+    display: flex;
+    align-items: center;
 }
+
 .levelBox::before,
 .levelBox::after {
     content: '';
@@ -134,47 +137,6 @@ body, html {
 .orangeDefault {
     color: darkorange;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #container {
     display: flex;
@@ -240,11 +202,14 @@ body, html {
 }
 
 @media screen and (max-height: 600px) {
-    #footer, #walkAwayDiv {
+    #footer {
         min-height: 20vh;
     }
     #header {
         min-height: 5vh;
+    }
+    #walkAwayButton {
+        transform: translateY(-15px);
     }
 }
 @media screen and (max-height: 500px) {
@@ -254,16 +219,25 @@ body, html {
     #header {
         min-height: 3vh;
     }
+    .levelBox {
+        margin-bottom: 0 !important;
+    }
 }
 @media screen and (max-height: 400px) {
-    #footer, #walkAwayDiv {
+    #footer {
         min-height: 32vh;
     }
     #header {
         min-height: 3vh;
     }
-    #article, #levelDiv {
+    #article {
         min-height: 60vh;
+    }
+    .levelBox {
+        transform: translateY(-10px);
+    }
+    #walkAwayButton {
+        transform: translateY(-20px);
     }
 }
 
@@ -530,15 +504,26 @@ body, html {
     .textContainer {
         font-size: 1.3vh;
     }
+    .levelBox {
+        height: 3vh;
+    }
 }
 @media  screen and (max-height: 1200px) {
     .textContainer {
         font-size: 1.5vh;
     }
+    .levelBox {
+        height: 3.5vh;
+    }
 }
 @media  screen and (max-height: 1100px) {
     .textContainer {
         font-size: 2vh;
+    }
+}
+@media  screen and (max-height: 900px) {
+    .levelBox {
+        margin-bottom: 5px;
     }
 }
 @media  screen and (max-height: 800px) {
@@ -577,10 +562,16 @@ body, html {
     .textContainer {
         font-size: 3.5vh;
     }
+    .levelBox {
+        margin-bottom: 2px;
+    }
 }
 @media  screen and (max-height: 500px) {
     #timer {
         height: 9vh;
+    }
+    #walkAwayDiv {
+        /*EDIT THIS **/
     }
     #questionContainer {
         height: 20vh;
