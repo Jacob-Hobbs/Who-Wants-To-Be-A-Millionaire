@@ -25,17 +25,8 @@ body, html {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-}
-
-#logoArea {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    min-height: 10vh;
-    /* Delete below after testing*/
-    /*border-color: orange;
-    border-style: solid;*/
+    /*Adding for testing */
+    z-index: 2;
 }
 
 #levelDiv {
