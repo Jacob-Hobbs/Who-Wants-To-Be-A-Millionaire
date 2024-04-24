@@ -63,3 +63,17 @@ function hideAside() {
 
 //FIXME: Aside will popout using above functions, however resizing the
 // window leaves a white rectangle to the side of the questionScreen div.
+
+let screenWidth = window.innerWidth;
+
+window.addEventListener('resize', function() {
+    screenWidth = window.innerWidth;
+    if ((screenWidth < 1000) && asideOpen === true) {
+        hideAside();
+        console.log(screenWidth);
+        //questionScreen.style.width = "";
+
+    } else if (screenWidth >= 1000) {
+
+    }
+});

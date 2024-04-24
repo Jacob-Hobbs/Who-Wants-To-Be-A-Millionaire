@@ -301,9 +301,6 @@ body, html {
     #popoutButton {
         visibility: hidden;
     }
-    #levelAside {
-        visibility: visible;
-    }
 }
 
 #article {
