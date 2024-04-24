@@ -51,11 +51,11 @@ function hideAside() {
     popoutButton.style.marginRight = "0";
 
     popoutButton.addEventListener("mouseover", () => {
-        popoutButton.style.backgroundImage = "url('../css/resources/popout.png')";
+        popoutButton.style.backgroundImage = "url('../css/resources/popoutHover.png')";
         popoutButton.style.transition = "0.3s";
     })
     popoutButton.addEventListener("mouseout", () => {
-        popoutButton.style.backgroundImage = "url('../css/resources/popoutHover.png')";
+        popoutButton.style.backgroundImage = "url('../css/resources/popout.png')";
         popoutButton.style.transition = "0.3s";
     })
 
@@ -71,7 +71,8 @@ window.addEventListener('resize', function() {
     if ((screenWidth < 1000) && asideOpen === true) {
         hideAside();
         console.log(screenWidth);
-        //questionScreen.style.width = "";
+        questionScreen.style.width = "78%";
+        aside.style.width = "22%";
 
     } else if (screenWidth >= 1000) {
 

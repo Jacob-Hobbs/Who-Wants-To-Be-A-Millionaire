@@ -297,7 +297,7 @@ body, html {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1001px) {
     #popoutButton {
         visibility: hidden;
     }
