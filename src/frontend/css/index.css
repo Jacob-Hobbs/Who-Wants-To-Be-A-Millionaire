@@ -29,7 +29,7 @@ body, html {
     flex-wrap: nowrap;
     /*Adding for testing */
     z-index: 2;
-    transition: width 0.8s ease;
+    position: relative;
 }
 
 #levelDiv {
@@ -281,6 +281,7 @@ body, html {
     transition: 0.3s;
 }
 
+/*TODO: In an attempt to fix resizing issues, lets move this to levelAside.js*/
 @media screen and (max-width: 1000px) {
     #questionScreen {
         width: 100%;

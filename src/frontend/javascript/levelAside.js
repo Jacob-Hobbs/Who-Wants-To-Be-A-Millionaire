@@ -3,7 +3,9 @@ const questionScreen = document.getElementById("questionScreen");
 const container = document.getElementById("container");
 const popoutButton = document.getElementById("popoutButton");
 const walkAwayButton = document.getElementById("walkAwayButton");
+const levelDiv = document.getElementById("levelDiv");
 let asideOpen = false;
+let screenResizedWithAsideOpen = false;
 document.getElementById("popoutButton").addEventListener("click", function() {
     if (asideOpen === false) {
         popoutButton.style.backgroundImage = "url('../css/resources/popback.png')";
@@ -24,6 +26,13 @@ function showAside() {
     container.style.flexDirection = "row-reverse";
     aside.style.width = "35%";
     aside.style.visibility = "visible";
+    aside.style.transition = "width 0.8s ease";
+
+    levelDiv.style.visibility = "visible";
+    walkAwayButton.style.visibility = "visible";
+
+
+
     questionScreen.style.zIndex = "1";
     questionScreen.style.position = "absolute";
     aside.style.position = "absolute";
@@ -45,7 +54,11 @@ function hideAside() {
     asideOpen = false;
     container.style.flexDirection = "row";
     aside.style.width = "0";
-    aside.style.visibility = "hidden";
+    levelDiv.style.visibility = "hidden";
+    walkAwayButton.style.visibility = "hidden";
+
+
+
     questionScreen.style.position = "relative";
     aside.style.position = "relative";
     popoutButton.style.marginRight = "0";
@@ -68,13 +81,17 @@ let screenWidth = window.innerWidth;
 
 window.addEventListener('resize', function() {
     screenWidth = window.innerWidth;
-    if ((screenWidth < 1000) && asideOpen === true) {
+
+    if ((screenWidth > 1000) && asideOpen === true) {
         hideAside();
-        console.log(screenWidth);
         questionScreen.style.width = "78%";
         aside.style.width = "22%";
-
-    } else if (screenWidth >= 1000) {
-
+        aside.style.visibility = "visible";
+        levelDiv.style.visibility = "visible";
+        walkAwayButton.style.visibility = "visible";
+        questionScreen.style.position = "relative";
+        aside.style.position = "relative";
+        // TODO: Added below line as condition for resizing when aside is open.
+        screenResizedWithAsideOpen = true;
     }
 });
