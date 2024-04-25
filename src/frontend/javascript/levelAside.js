@@ -5,93 +5,121 @@ const popoutButton = document.getElementById("popoutButton");
 const walkAwayButton = document.getElementById("walkAwayButton");
 const levelDiv = document.getElementById("levelDiv");
 let asideOpen = false;
-let screenResizedWithAsideOpen = false;
+
 document.getElementById("popoutButton").addEventListener("click", function() {
     if (asideOpen === false) {
         popoutButton.style.backgroundImage = "url('../css/resources/popback.png')";
         popoutButton.style.transition = "margin-right 0.8s ease";
-        showAside();
+        openAside();
     } else {
         popoutButton.style.backgroundImage = "url('../css/resources/popout.png')";
         popoutButton.style.transition = "right 0.8s ease";
-        hideAside();
+        closeAside();
     }
 });
 
-//function to show aside
-function showAside() {
+// This function is to only be used when the screen is resized to above 1000px
+function resetAsideToOpenConditions() {
+    asideOpen = true;
+    aside.style.width = "22%";
+    aside.style.visibility = "visible";
+    aside.style.position = "relative";
+    questionScreen.style.width = "78%";
+    questionScreen.style.position = "relative";
+    container.style.flexDirection = "row";
+    levelDiv.style.visibility = "visible";
+    walkAwayButton.style.visibility = "visible";
+}
 
+// This function is to only be used when the screen is resized to below 1000px
+function resetAsideToClosedConditions() {
+    asideOpen = false;
+    aside.style.width = "0";
+    aside.style.visibility = "hidden";
+    aside.style.position = "relative";
+    questionScreen.style.width = "100%";
+    questionScreen.style.position = "relative";
+    container.style.flexDirection = "row";
+    levelDiv.style.visibility = "hidden";
+    walkAwayButton.style.visibility = "hidden";
+    popoutButton.style.transition = "none";
+    popoutButton.style.right = "30px";
+    popoutButton.style.position = "relative";
+    popoutButton.style.marginRight = "0";
+    popoutButton.style.backgroundImage = "url('../css/resources/popout.png')";
+}
+
+// Controls state of viewport according to screen width
+window.addEventListener('resize', function() {
+    let screenWidth = window.innerWidth;
+    if (screenWidth > 1000) {
+        resetAsideToOpenConditions();
+    } else if (screenWidth <= 1000) {
+        resetAsideToClosedConditions();
+    }
+
+});
+
+// This function controls what will happen when the popout button is pressed when the
+// aside is not currently open
+function openAside() {
     asideOpen = true;
     container.style.display = "flex";
     container.style.flexDirection = "row-reverse";
     aside.style.width = "35%";
     aside.style.visibility = "visible";
     aside.style.transition = "width 0.8s ease";
-
     levelDiv.style.visibility = "visible";
     walkAwayButton.style.visibility = "visible";
-
-
-
     questionScreen.style.zIndex = "1";
     questionScreen.style.position = "absolute";
     aside.style.position = "absolute";
     popoutButton.style.marginRight = "35vw";
 
-    popoutButton.addEventListener("mouseover", () => {
-        popoutButton.style.backgroundImage = "url('../css/resources/popbackHover.png')";
-        popoutButton.style.transition = "0.3s";
-    })
-    popoutButton.addEventListener("mouseout", () => {
-        popoutButton.style.backgroundImage = "url('../css/resources/popback.png')";
-        popoutButton.style.transition = "0.3s";
-    })
-
+    setPopoutButtonImage("in");
 }
 
-// function to hide aside
-function hideAside() {
+// This function controls what will happen when the popout button is pressed when the
+// aside is open
+function closeAside() {
     asideOpen = false;
-    container.style.flexDirection = "row";
     aside.style.width = "0";
-    levelDiv.style.visibility = "hidden";
-    walkAwayButton.style.visibility = "hidden";
-
-
-
-    questionScreen.style.position = "relative";
     aside.style.position = "relative";
+    aside.style.transition = "width 0.8s ease";
+    questionScreen.style.width = "100%";
+    questionScreen.style.position = "relative";
+    container.style.flexDirection = "row";
+    levelDiv.style.visibility = "hidden";
+    levelDiv.style.transition = "width 0.8s ease";
+    walkAwayButton.style.visibility = "hidden";
+    walkAwayButton.style.transition = "width 0.8s ease";
+    popoutButton.style.transition = "none";
+    popoutButton.style.right = "30px";
+    popoutButton.style.position = "relative";
     popoutButton.style.marginRight = "0";
 
+    setPopoutButtonImage("out");
+}
+
+// Used to set the image of the popoutButton based on user action
+function setPopoutButtonImage(direction) {
+    if (direction === "out") {
+        setPopoutButtonEventListener("popout");
+    } else if (direction === "in") {
+        setPopoutButtonEventListener("popback");
+    }
+}
+
+// Used within setPopoutButtonImage; created to minimize code redundancy
+function setPopoutButtonEventListener(name) {
     popoutButton.addEventListener("mouseover", () => {
-        popoutButton.style.backgroundImage = "url('../css/resources/popoutHover.png')";
+        popoutButton.style.backgroundImage = "url('../css/resources/" + name + "Hover.png')";
         popoutButton.style.transition = "0.3s";
     })
     popoutButton.addEventListener("mouseout", () => {
-        popoutButton.style.backgroundImage = "url('../css/resources/popout.png')";
+        popoutButton.style.backgroundImage = "url('../css/resources/" + name + ".png')";
         popoutButton.style.transition = "0.3s";
     })
-
 }
 
-//FIXME: Aside will popout using above functions, however resizing the
-// window leaves a white rectangle to the side of the questionScreen div.
 
-let screenWidth = window.innerWidth;
-
-window.addEventListener('resize', function() {
-    screenWidth = window.innerWidth;
-
-    if ((screenWidth > 1000) && asideOpen === true) {
-        hideAside();
-        questionScreen.style.width = "78%";
-        aside.style.width = "22%";
-        aside.style.visibility = "visible";
-        levelDiv.style.visibility = "visible";
-        walkAwayButton.style.visibility = "visible";
-        questionScreen.style.position = "relative";
-        aside.style.position = "relative";
-        // TODO: Added below line as condition for resizing when aside is open.
-        screenResizedWithAsideOpen = true;
-    }
-});

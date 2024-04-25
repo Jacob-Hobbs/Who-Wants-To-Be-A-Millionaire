@@ -6,6 +6,7 @@ body, html {
     box-sizing: border-box;
 }
 
+
 #questionScreen {
     width: 78%;
     height: 100%;
@@ -58,7 +59,7 @@ body, html {
 
 .levelBox {
     height: 3.5vh;
-    width: 13vw;
+    width: 75%;
     background-color: #010320;
     color: white;
     position: relative;
@@ -281,7 +282,6 @@ body, html {
     transition: 0.3s;
 }
 
-/*TODO: In an attempt to fix resizing issues, lets move this to levelAside.js*/
 @media screen and (max-width: 1000px) {
     #questionScreen {
         width: 100%;
@@ -296,6 +296,10 @@ body, html {
     #article {
         width: 100% !important;
     }
+    #container {
+        flex-direction: row-reverse;
+    }
+
 }
 
 @media screen and (min-width: 1001px) {
