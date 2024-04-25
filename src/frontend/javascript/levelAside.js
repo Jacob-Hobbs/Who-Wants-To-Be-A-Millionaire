@@ -47,6 +47,7 @@ function resetAsideToClosedConditions() {
     popoutButton.style.position = "relative";
     popoutButton.style.marginRight = "0";
     popoutButton.style.backgroundImage = "url('../css/resources/popout.png')";
+    setPopoutButtonImage("out");
 }
 
 // Controls state of viewport according to screen width
