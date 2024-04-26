@@ -58,7 +58,6 @@ window.addEventListener('resize', function() {
     } else if (screenWidth <= 1000) {
         resetAsideToClosedConditions();
     }
-
 });
 
 // This function controls what will happen when the popout button is pressed when the
@@ -98,7 +97,6 @@ function closeAside() {
     popoutButton.style.right = "30px";
     popoutButton.style.position = "relative";
     popoutButton.style.marginRight = "0";
-
     setPopoutButtonImage("out");
 }
 
