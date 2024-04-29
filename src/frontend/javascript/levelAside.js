@@ -4,7 +4,9 @@ const container = document.getElementById("container");
 const popoutButton = document.getElementById("popoutButton");
 const walkAwayButton = document.getElementById("walkAwayButton");
 const levelDiv = document.getElementById("levelDiv");
+let walkAwayDiv = document.getElementById("walkAwayDiv");
 let asideOpen = false;
+
 
 document.getElementById("popoutButton").addEventListener("click", function() {
     if (asideOpen === false) {
@@ -63,10 +65,20 @@ window.addEventListener('resize', function() {
 // This function controls what will happen when the popout button is pressed when the
 // aside is not currently open
 function openAside() {
+    let screenWidth = window.innerWidth;
+
+    if (screenWidth < 550) {
+        aside.style.width = "75%";
+        walkAwayDiv.appendChild(popoutButton);
+        popoutButton.style.right = "0";
+    } else {
+        aside.style.width = "35%";
+    }
+
     asideOpen = true;
     container.style.display = "flex";
     container.style.flexDirection = "row-reverse";
-    aside.style.width = "35%";
+    //aside.style.width = "35%";
     aside.style.visibility = "visible";
     aside.style.transition = "width 0.8s ease";
     levelDiv.style.visibility = "visible";
@@ -77,6 +89,8 @@ function openAside() {
     popoutButton.style.marginRight = "35vw";
 
     setPopoutButtonImage("in");
+
+
 }
 
 // This function controls what will happen when the popout button is pressed when the
@@ -120,5 +134,7 @@ function setPopoutButtonEventListener(name) {
         popoutButton.style.transition = "0.3s";
     })
 }
+
+
 
 
