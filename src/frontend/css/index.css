@@ -53,8 +53,8 @@ body, html {
     justify-content: center;
     min-height: 10vh;
     /* Delete below after testing*/
-    border-color: orange;
-    border-style: solid;
+    /*border-color: orange;*/
+    /*border-style: solid;*/
 }
 
 .levelBox {

@@ -5,6 +5,7 @@ const popoutButton = document.getElementById("popoutButton");
 const walkAwayButton = document.getElementById("walkAwayButton");
 const levelDiv = document.getElementById("levelDiv");
 let walkAwayDiv = document.getElementById("walkAwayDiv");
+let header = document.getElementById("header");
 let asideOpen = false;
 
 
@@ -66,45 +67,67 @@ window.addEventListener('resize', function() {
 // aside is not currently open
 function openAside() {
     let screenWidth = window.innerWidth;
+    let screenHeight = window.innerHeight;
+    aside.style.transition = "width 0.8s ease";
 
+    // reposition popoutButton if screen < 550 px
     if (screenWidth < 550) {
         aside.style.width = "75%";
         walkAwayDiv.appendChild(popoutButton);
         popoutButton.style.right = "0";
+        popoutButton.style.marginRight = "0";
+        popoutButton.style.top = "0";
+        popoutButton.style.marginLeft = "30px";
+    } else if (screenHeight < 550) {
+        aside.style.width = "40%";
+        walkAwayDiv.appendChild(popoutButton);
+        popoutButton.style.right = "0";
+        popoutButton.style.marginRight = "0";
+        popoutButton.style.top = "0";
+        popoutButton.style.marginLeft = "30px";
+        popoutButton.style.transform = "translateY(-15px)";
     } else {
         aside.style.width = "35%";
+        popoutButton.style.marginRight = "35vw";
     }
 
     asideOpen = true;
     container.style.display = "flex";
     container.style.flexDirection = "row-reverse";
-    //aside.style.width = "35%";
     aside.style.visibility = "visible";
-    aside.style.transition = "width 0.8s ease";
     levelDiv.style.visibility = "visible";
     walkAwayButton.style.visibility = "visible";
     questionScreen.style.zIndex = "1";
     questionScreen.style.position = "absolute";
     aside.style.position = "absolute";
-    popoutButton.style.marginRight = "35vw";
 
     setPopoutButtonImage("in");
-
-
 }
 
 // This function controls what will happen when the popout button is pressed when the
 // aside is open
 function closeAside() {
+    let screenWidth = window.innerWidth;
+    let screenHeight = window.innerHeight;
+    aside.style.transition = "width 0.8s ease";
+    levelDiv.style.transition = "width 0.8s ease";
+
+    if (screenWidth < 550) {
+        header.appendChild(popoutButton);
+        popoutButton.style.top = "30px";
+    } else if (screenHeight < 550) {
+        header.appendChild(popoutButton);
+        popoutButton.style.top = "30px";
+        popoutButton.style.transform = "translateY(0px)"
+    }
+
     asideOpen = false;
     aside.style.width = "0";
     aside.style.position = "relative";
-    aside.style.transition = "width 0.8s ease";
     questionScreen.style.width = "100%";
     questionScreen.style.position = "relative";
     container.style.flexDirection = "row";
     levelDiv.style.visibility = "hidden";
-    levelDiv.style.transition = "width 0.8s ease";
     walkAwayButton.style.visibility = "hidden";
     walkAwayButton.style.transition = "width 0.8s ease";
     popoutButton.style.transition = "none";
