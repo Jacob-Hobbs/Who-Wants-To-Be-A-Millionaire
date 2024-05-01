@@ -27,12 +27,13 @@ body, html {
 #article {
     height: 60vh;
     width: 100%;
-    /* Delete below after testing*/
-    /*border-color: orange;*/
-    /*border-style: solid;*/
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    /* Delete below after testing*/
+    /*border-color: orange;*/
+    /*border-style: solid;*/
 }
 
 #footer {
@@ -78,5 +79,24 @@ body, html {
 
 #rulesButton:hover {
     background-image: url("../css/resources/rulesButtonHover.png");
+    transition: 0.3s;
+}
+
+#soundButton {
+    left: 30px;
+    cursor: pointer;
+    background-image: url("../css/resources/soundYes.png");
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    top: 30px;
+    min-height: 75px;
+    min-width: 75px;
+    border-color: #47a1c0;
+    width: 9vh;
+    height: 9vh;
+}
+#soundButton:hover {
+    background-image: url("../css/resources/soundYesHover.png");
     transition: 0.3s;
 }
