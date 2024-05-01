@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../css/resources/titleScreenBackground.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#header {
+    height: 10vh;
+    width: 100%;
+    /* Delete below after testing*/
+    /*border-color: orange;*/
+    /*border-style: solid;*/
+}
+
+#article {
+    height: 60vh;
+    width: 100%;
+    /* Delete below after testing*/
+    /*border-color: orange;*/
+    /*border-style: solid;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#footer {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Delete below after testing*/
+    /*border-color: orange;*/
+    /*border-style: solid;*/
+}
+
+#logoImage {
+    height: 55vh;
+}
+
+.mainTitleButton {
+    border-color: #47a1c0;
+    min-width: 109px;
+    min-height: 73px;
+    width: 15vh;
+    height: 10vh;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+#startGameButton {
+    margin-right: 130px;
+    background-image: url("../css/resources/playButton.png");
+}
+
+#startGameButton:hover {
+    background-image: url("../css/resources/playButtonHover.png");
+    transition: 0.3s;
+}
+
+#rulesButton {
+    background-image: url("../css/resources/rulesButton.png");
+}
+
+#rulesButton:hover {
+    background-image: url("../css/resources/rulesButtonHover.png");
+    transition: 0.3s;
+}
