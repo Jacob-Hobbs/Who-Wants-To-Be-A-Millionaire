@@ -100,3 +100,12 @@ body, html {
     background-image: url("../css/resources/soundYesHover.png");
     transition: 0.3s;
 }
+
+@media screen and (max-width: 450px) {
+    #logoImage {
+        height: 40vh !important;
+    }
+    #startGameButton {
+        margin-right: 50px !important;
+    }
+}
