@@ -60,3 +60,4 @@ function revertLayoutChanges() {
     startGameButton.style.marginRight = "130px";
     startGameButton.style.marginTop = "30px";
 }
+

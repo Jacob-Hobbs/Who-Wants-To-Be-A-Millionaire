@@ -49,6 +49,7 @@ body, html {
 
 #logoImage {
     height: 55vh;
+    animation: spin 2s linear alternate;
 }
 
 .mainTitleButton {
@@ -101,11 +102,107 @@ body, html {
     transition: 0.3s;
 }
 
+.flyingSymbols {
+    height: 6vh;
+    position: absolute;
+}
+
+#questionMark1 {
+    height: 6vh;
+    animation: floatAcross1 15s linear infinite;
+    animation-delay: 3s;
+    position: absolute;
+    top: -100px;
+    left: -100px;
+}
+
+#questionMark2 {
+    animation-delay: 10s;
+    left: 600px;
+    top: -200px;
+    animation: floatAcross2 15s linear infinite;
+}
+
+#phoneSymbol1 {
+    animation: floatAcross3 15s linear infinite;
+    position: absolute;
+    animation-delay: 3s;
+    top: 60vh;
+    left: -10vw;
+}
+
+#fiftyFiftySymbol {
+    top: 100vh;
+    left: 25vw;
+    animation: floatAcross4 15s linear infinite;
+    animation-delay: 3s;
+}
+
+
 @media screen and (max-width: 450px) {
     #logoImage {
         height: 40vh !important;
     }
     #startGameButton {
         margin-right: 50px !important;
+    }
+}
+
+@keyframes spin {
+    from {
+        height: 300vh;
+        transform: rotate(0deg);
+    }
+    to {
+        height: 55vh;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes floatAcross1 {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(100vw) translateY(100vh) rotate(360deg);
+    }
+    100% {
+        transform: translateX(200vw) translateY(200vh) rotate(0deg);
+    }
+}
+
+@keyframes floatAcross2 {
+    0% {
+        transform: translateX(30vw) translateY(-300px) rotate(0deg);
+    }
+    50% {
+        transform: translateX(0) translateY(150vh) rotate(360deg);
+    }
+    100% {
+        transform: translateX(-100vw) translateY(-300px) rotate(0deg);
+    }
+}
+
+@keyframes floatAcross3 {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(125vw) translateY(-50vh) rotate(360deg);
+    }
+    100% {
+        transform: translateX(50vw) translateY(60vh) rotate(0deg);
+    }
+}
+
+@keyframes floatAcross4 {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(25vw) translateY(-120vh) rotate(360deg);
+    }
+    100% {
+        transform: translateX(80vw) translateY(-60vh) rotate(0deg);
     }
 }
