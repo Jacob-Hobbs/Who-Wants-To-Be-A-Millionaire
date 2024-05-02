@@ -105,13 +105,12 @@ body, html {
 .flyingSymbols {
     height: 6vh;
     position: absolute;
+    min-height: 30px;
 }
 
 #questionMark1 {
-    height: 6vh;
     animation: floatAcross1 15s linear infinite;
     animation-delay: 3s;
-    position: absolute;
     top: -100px;
     left: -100px;
 }
@@ -123,9 +122,15 @@ body, html {
     animation: floatAcross2 15s linear infinite;
 }
 
+#questionMark3 {
+    left: 80vw;
+    top: -30vh;
+    animation: floatAcross6 30s linear infinite;
+    animation-delay: 7s;
+}
+
 #phoneSymbol1 {
     animation: floatAcross3 15s linear infinite;
-    position: absolute;
     animation-delay: 3s;
     top: 60vh;
     left: -10vw;
@@ -136,6 +141,12 @@ body, html {
     left: 25vw;
     animation: floatAcross4 15s linear infinite;
     animation-delay: 3s;
+}
+
+#peopleSymbol {
+    top: -30vh;
+    animation: floatAcross5 25s linear infinite;
+    animation-delay: 5s;
 }
 
 
@@ -204,5 +215,29 @@ body, html {
     }
     100% {
         transform: translateX(80vw) translateY(-60vh) rotate(0deg);
+    }
+}
+
+@keyframes floatAcross5 {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(35vw) translateY(200vh) rotate(360deg);
+    }
+    100% {
+        transform: translateX(65vw) translateY(-80vh) rotate(0deg);
+    }
+}
+
+@keyframes floatAcross6 {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-150vw) translateY(150vh) rotate(360deg);
+    }
+    100% {
+        transform: translateX(200vw) translateY(0) rotate(0deg);
     }
 }
